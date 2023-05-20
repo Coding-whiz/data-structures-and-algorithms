@@ -18,7 +18,9 @@ Reconstruct BST
   2     5     19
  /           /
 1           18
-Step by Step Explanation:
+
+EXPLANATION:
+
 1. We start by defining a `TreeNode` class to represent each node of the Binary Search Tree (BST). Each node has a value (`val`), as well as references to its left and right child nodes (`left` and `right`).
 2. The `constructBST` function takes the pre-order traversal array (`preorder`) as input and returns the root node of the reconstructed BST.
 3. The first base case of the recursive function is when the `preorder` array is empty, indicating that there are no more nodes to construct. In this case, we return `None`.
@@ -33,6 +35,15 @@ Step by Step Explanation:
 12. We call the `constructBST` function with the `preorder` array to reconstruct the BST and obtain the root node.
 13. We then call `inorderTraversal` with the root node to obtain the inorder traversal of the BST as a list.
 14. Finally, we print the inorder traversal, which should match the expected output `[1, 2, 4, 5, 10, 17, 18, 19]
+
+TIME AND SPACE COMPLEXITY:
+
+Time complexity of construct BST function is O(n) and space complexity of the function is O(log(n))
+In worst case scenario if the input pre-order traversal is already sorted (resulting in an unbalanced BST), the height of the BST becomes n-1 and thus the space complexity becomes O(n)
+
+Therefore;
+Time Complexity: O(n)
+Space Complexity: O(log(n)) in average case and O(n) in worst case
 
 '''
 class TreeNode:
